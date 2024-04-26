@@ -40,9 +40,19 @@ void printArr(int *arr, int size)
 }
 
 int main(void) {
+
 	int arr[] = {2,3,4,1,6};
-	printArr(arr, 5);
-	insertionSort(arr, 5);
-	printArr(arr, 5);
+	int size = sizeof(arr) / sizeof(arr[0]);
+	printArr(arr, size);
+	insertionSort(arr, size);
+	printArr(arr, size);
+
+	int arr1[] = {2,3,1,1,6,3,9,0,8};
+	size = sizeof(arr1) / sizeof(arr1[0]);
+	printArr(arr1, size);
+	insertionSort(arr1, size);
+	printArr(arr1, size);
+
+
 	return EXIT_SUCCESS;
 }
